@@ -1,0 +1,425 @@
+{
+  "data_file": "datos/encuesta_egresados.csv",
+  "top_k_categories": 10,
+  "questions": [
+    {
+      "column": "¿En la actualidad, en qué actividad ocupa la mayor parte de su tiempo?",
+      "label": "Actividad principal actual",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "column": "En esa actividad usted es",
+      "label": "Condición en esa actividad",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "column": "¿Cuántos meses ha estado buscando trabajo?",
+      "label": "Meses buscando empleo",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "column": "¿Cuál ha sido la mayor dificultad a la hora de buscar empleo?",
+      "label": "Mayor dificultad para conseguir empleo",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+
+    {
+      "column": "Empleado. Su actividad laboral es:",
+      "label": "Tipo de actividad laboral (Empleado)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "column": "Empleado. ¿Se encuentra relacionado su empleo con la carrera que estudió?",
+      "label": "Empleo relacionado con la carrera",
+      "type": "BINARIA",
+      "section": "A"
+    },
+    {
+      "column": "Empleado.¿Qué tipo de vinculación tiene con esta empresa / Institución ?",
+      "label": "Tipo de vinculación (Empleado)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "column": "Empleado. ¿Su contrato de trabajo incluye prestaciones sociales?",
+      "label": "Contrato con prestaciones",
+      "type": "BINARIA",
+      "section": "A"
+    },
+    {
+      "column": "Empleado. ¿En qué sector labora?",
+      "label": "Sector en el que labora (Empleado)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+
+    {
+      "label": "Área en la que labora (Empleado)",
+      "type": "MULTI_COLS",
+      "section": "A",
+      "columns": [
+        "Área de gestión",
+        "Área de recursos humanos",
+        "Área de comercialización",
+        "Área de contabilidad y finanzas",
+        "Área de producción",
+        "Área de administración",
+        "Área educativa",
+        "Área artística",
+        "Área cultural",
+        "Área salud",
+        "Otra. ¿Cuál?"
+      ]
+    },
+    {
+      "column": "Empleado. ¿A qué nivel jerárquico corresponde a su empleo actual ?",
+      "label": "Nivel jerárquico (Empleado)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+
+    {
+      "label": "Tipo de empresa (Empleado)",
+      "type": "MULTI_COLS",
+      "section": "A",
+      "columns": [
+        "Privada",
+        "Pública",
+        "De economía mixta",
+        "ONG",
+        "Otro. ¿Cuál?"
+      ]
+    },
+    {
+      "column": "Empleado. ¿Cuál fue su ingreso promedio laboral anual en la empresa donde labora ?",
+      "label": "Ingreso anual (Empleado)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+
+    {
+      "column": "Independiente. Su actividad laboral es:",
+      "label": "Actividad laboral (Independiente)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "column": "Independiente. ¿Se encuentra relacionadas las actividades que realiza por cuenta propia con la carrera que estudió?",
+      "label": "Actividades propias relacionadas con la carrera",
+      "type": "BINARIA",
+      "section": "A"
+    },
+    {
+      "label": "Forma de trabajo (Independiente)",
+      "type": "MULTI_COLS",
+      "section": "A",
+      "columns": [
+        "Prestación de servicios",
+        "Trabajo por obra",
+        "Trabajo por comisión",
+        "Otra. ¿Cuál?3"
+      ]
+    },
+    {
+      "label": "Área en la que labora (Independiente)",
+      "type": "MULTI_COLS",
+      "section": "A",
+      "columns": [
+        "Área de gestión",
+        "Área de recursos humanos",
+        "Área de comercialización",
+        "Área de contabilidad y finanzas",
+        "Área de producción",
+        "Área de administración",
+        "Área educativa",
+        "Área artística",
+        "Área cultural",
+        "Área salud",
+        "Otra. ¿Cuál?3"
+      ]
+    },
+    {
+      "column": "Independiente. ¿A que nivel jerárquico corresponde a su empleo actual?",
+      "label": "Nivel jerárquico (Independiente)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "label": "Tipo de empresa (Independiente)",
+      "type": "MULTI_COLS",
+      "section": "A",
+      "columns": [
+        "Privada  9",
+        "Pública  10",
+        "De economía mixta  11",
+        "ONG 12",
+        "Otro. ¿Cuál?13"
+      ]
+    },
+    {
+      "column": "Independiente. ¿Cuál fue su ingreso promedio laboral anual?",
+      "label": "Ingreso anual (Independiente)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+
+    {
+      "column": "Propietario. ¿Se encuentra relacionadas las actividades que realiza en su empresa con la carrera que estudió?",
+      "label": "Actividades de la empresa relacionadas con la carrera",
+      "type": "BINARIA",
+      "section": "A"
+    },
+    {
+      "label": "Área en la que se desempeña (Propietario)",
+      "type": "MULTI_COLS",
+      "section": "A",
+      "columns": [
+        "Área de gestión 14",
+        "Área de recursos humanos 15",
+        "Área de comercialización 16",
+        "Área de contabilidad y finanzas 17",
+        "Área de producción 18",
+        "Área de administración 19",
+        "Área educativa 20",
+        "Área artística 21",
+        "Área cultural 22",
+        "Área salud 23",
+        "Otra. ¿Cuál?24"
+      ]
+    },
+    {
+      "column": "Propietario. ¿Cómo clasificaria el ambito de las actividades de su empresa?",
+      "label": "Ámbito de actividades de la empresa",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+    {
+      "column": "Propietario. ¿Cuál fue su ingreso promedio laboral anual por las actividades de su empresa?",
+      "label": "Ingreso anual (Propietario)",
+      "type": "CATEGORICA",
+      "section": "A"
+    },
+
+    {
+      "column": "¿Tiene interés por crear un emprendimiento?",
+      "label": "Interés por crear emprendimiento",
+      "type": "CATEGORICA",
+      "section": "B"
+    },
+    {
+      "label": "Temas a mejorar para emprender",
+      "type": "MULTI_COLS",
+      "section": "B",
+      "columns": [
+        "Liderazgo",
+        "Disposición al aprendizaje",
+        "Comunicación",
+        "Trabajo en equipo",
+        "Habilidades comerciales",
+        "Otra. ¿Cuál?31"
+      ]
+    },
+
+    {
+      "column": "¿Cómo valora en términos generales el cuerpo de docentes del programa académico en cuanto a su calidad?",
+      "label": "Calidad de docentes",
+      "type": "LIKERT",
+      "section": "C"
+    },
+    {
+      "column": "Evalué la calidad del currículo vigente del programa académico",
+      "label": "Calidad del currículo",
+      "type": "LIKERT",
+      "section": "C"
+    },
+    {
+      "column": "¿Se encuentra satisfecho con el programa académico del cual egresó?",
+      "label": "Satisfacción con el programa",
+      "type": "BINARIA",
+      "section": "C"
+    },
+    {
+      "column": "Califique de 1 a 5 la calidad de la formación que imparte el programa sobre sus estudiantes",
+      "label": "Calidad de la formación impartida",
+      "type": "LIKERT",
+      "section": "C"
+    },
+    {
+      "column": "¿Recomendaría a un bachiller seleccionar el programa que estudió en esta institución?",
+      "label": "Recomendaría el programa",
+      "type": "BINARIA",
+      "section": "C"
+    },
+
+    {
+      "column": "Valore la forma como el programa favorece el desarrollo del proyecto de vida de 1 a 5, siendo 5 el valor más alto y 1 el más bajo.",
+      "label": "Programa y proyecto de vida",
+      "type": "LIKERT",
+      "section": "C"
+    },
+
+    {
+      "column": "Comunicar sus ideas y propuestas con claridad",
+      "label": "Comunicar ideas y propuestas",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "Aprender y mantenerse actualizado",
+      "label": "Aprender y mantenerse actualizado",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "Ser creativo e innovador",
+      "label": "Ser creativo e innovador",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "Buscar, analizar, administrar y compartir información",
+      "label": "Gestión de información",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "Crear, investigar y adoptar tecnología",
+      "label": "Crear e investigar en tecnología",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "Capacidad de aprender a relacionarse con los demás",
+      "label": "Relaciones interpersonales",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "Aceptar las diferencias y trabajar en contexto multiculturales",
+      "label": "Trabajo en contextos multiculturales",
+      "type": "LIKERT",
+      "section": "D"
+    },
+
+    {
+      "column": "¿Ha estudiado inglés durante sus estudios en la UTP?",
+      "label": "Estudió inglés en la UTP",
+      "type": "BINARIA",
+      "section": "D"
+    },
+    {
+      "column": "¿Ha estudiado alemán durante sus estudios en la UTP?",
+      "label": "Estudió alemán en la UTP",
+      "type": "BINARIA",
+      "section": "D"
+    },
+    {
+      "column": "¿Ha estudiado francés durante sus estudios en la UTP?",
+      "label": "Estudió francés en la UTP",
+      "type": "BINARIA",
+      "section": "D"
+    },
+    {
+      "column": "¿Ha estudiado Portugués durante sus estudios en la UTP?",
+      "label": "Estudió portugués en la UTP",
+      "type": "BINARIA",
+      "section": "D"
+    },
+    {
+      "column": "¿Ha estudiado italiano durante sus estudios en la UTP?",
+      "label": "Estudió italiano en la UTP",
+      "type": "BINARIA",
+      "section": "D"
+    },
+    {
+      "column": "¿Cómo califica su nivel de competencia en HABLA en el idioma inglés?",
+      "label": "Nivel de HABLA en inglés",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "¿Cómo califica su nivel de competencia en ESCUCHA en el idioma inglés?",
+      "label": "Nivel de ESCUCHA en inglés",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "¿Cómo califica su nivel de competencia en LECTURA en el idioma inglés?",
+      "label": "Nivel de LECTURA en inglés",
+      "type": "LIKERT",
+      "section": "D"
+    },
+    {
+      "column": "¿Cómo califica su nivel de competencia en ESCRITURA en el idioma inglés?",
+      "label": "Nivel de ESCRITURA en inglés",
+      "type": "LIKERT",
+      "section": "D"
+    },
+
+    {
+      "column": "¿Está interesado en realizar un Posgrado en la UTP?",
+      "label": "Interés en posgrado UTP",
+      "type": "CATEGORICA",
+      "section": "E"
+    },
+    {
+      "column": "¿En qué nivel de estudio de posgrado?",
+      "label": "Nivel de estudio de posgrado",
+      "type": "CATEGORICA",
+      "section": "E"
+    },
+    {
+      "label": "Intereses particulares (UTP)",
+      "type": "MULTI_COLS",
+      "section": "E",
+      "columns": [
+        "Actividades deportivas",
+        "Actividades culturales",
+        "Caminatas y viajes",
+        "Conferencias",
+        "Convenios comerciales",
+        "Convención de egresados",
+        "Fiestas",
+        "Otros. ¿Cuál?"
+      ]
+    },
+    {
+      "label": "Procesos en los que quiere vincularse",
+      "type": "MULTI_COLS",
+      "section": "E",
+      "columns": [
+        "Prácticas empresariales",
+        "Asesoría y consultoría",
+        "Investigación",
+        "Donante de tiempo",
+        "Representante de los egresados ante su programa académico.",
+        "Responsabilidad social",
+        "Tutor/ facilitador en educación continuada",
+        "Otro. ¿Cuál?35"
+      ]
+    },
+    {
+      "column": "¿Qué beneficios te gustaría obtener de una asociación de egresados?",
+      "label": "Beneficios que le gustaría obtener",
+      "type": "CATEGORICA",
+      "section": "E"
+    },
+    {
+      "column": "Por ser recién egresado UTP tienes 6 meses gratis de asociación a la Asociación Nacional de Egresados ASEUTP. Desea adquirir este beneficio",
+      "label": "Acepta beneficio de 6 meses ASEUTP",
+      "type": "BINARIA",
+      "section": "E"
+    },
+    {
+      "column": "Autoriza a la Universidad para que la información que he suministrado sea utilizada únicamente en actividades que busquen el cumplimiento de la misión de la Universidad Tecnológica de Pereira y el beneficio de los egresados.",
+      "label": "Autoriza el tratamiento de datos",
+      "type": "BINARIA",
+      "section": "E"
+    }
+  ]
+}
