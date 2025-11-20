@@ -616,13 +616,23 @@ def main():
 
     # ===== CONTENIDO (PARTES A–E) =====
     sections = ["A", "B", "C", "D", "E"]
+    # Títulos visibles por sección
+    section_titles = {
+        "A": "Situación Laboral",
+        "B": "Parte B",
+        "C": "Parte C",
+        "D": "Parte D",
+        "E": "Parte E",
+    }
 
     for sec in sections:
         preguntas_sec = [q for q in questions if q.get("section", "").upper() == sec]
         if not preguntas_sec:
             continue
 
-        st.markdown(f"## Parte {sec}")
+        titulo = section_titles.get(sec, f"Parte {sec}")
+        st.markdown(f"## {titulo}")
+
         for q in preguntas_sec:
             qtype = q["type"].upper()
             label = q.get("label", "")
