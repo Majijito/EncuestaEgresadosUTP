@@ -669,6 +669,7 @@ def main():
     st.markdown("## Conclusiones del informe")
 
     conclusiones = st.text_area(
+        "Escribe aquí las conclusiones que quieres que aparezcan en el informe (PDF).",
         height=200,
         key="conclusiones_texto",
         help="Este texto se guardará mientras la página esté abierta y saldrá al imprimir/guardar en PDF.",
