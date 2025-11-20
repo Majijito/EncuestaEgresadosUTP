@@ -512,9 +512,23 @@ def main():
         .print-hide {{
         /* elementos que no deben salir en el PDF */
         }}
+        /* No separar títulos de lo que viene después */
+h2, h3 {{
+    page-break-after: avoid;
+    break-after: avoid;
+}}
+
+/* Evitar que las gráficas se partan entre páginas */
+.element-container,
+.stAltairChart,
+.stPlotlyChart {{
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}}
+
         @page {{
-            size: A4 landscape;
-            margin: 12mm;
+            size: A4;
+            margin: 8mm;
         }}
         @media print {{
         /* Ocultar sidebar, header y cosas de Streamlit */
@@ -619,10 +633,10 @@ def main():
     # Títulos visibles por sección
     section_titles = {
         "A": "Situación Laboral",
-        "B": "Emprendimiento",
-        "C": "Satisfacción con los recursos ofrecidos por la Universidad",
-        "D": "Autoevaluación",
-        "E": "Acreditación Institucional ",
+        "B": "Parte B",
+        "C": "Parte C",
+        "D": "Parte D",
+        "E": "Parte E",
     }
 
     for sec in sections:
