@@ -187,20 +187,28 @@ def detect_program_year_columns(df: pd.DataFrame):
 def get_program_year_filters(df: pd.DataFrame):
     prog_col, year_col = detect_program_year_columns(df)
 
-    # Programas únicos
+    # ==============================
+    # LIMPIAR COLUMNA PROGRAMA
+    # ==============================
+    prog_series = df[prog_col].astype(str).str.strip()
+
+    # Valores que queremos tratar como "vacíos"
+    prog_series = prog_series.replace(
+        ["", "nan", "NaN", "NULL", "null"], pd.NA
+    )
+
+    # Lista de programas válidos (sin null, sin vacíos)
     programas = (
-        df[prog_col]
-        .dropna()
-        .astype(str)
-        .str.strip()
-        .replace("", pd.NA)
+        prog_series
         .dropna()
         .unique()
         .tolist()
     )
     programas = sorted(programas)
 
-    # Años (extraemos 19xx, 20xx...)
+    # ==============================
+    # AÑOS (igual que antes)
+    # ==============================
     years_raw = df[year_col].dropna().astype(str).str.strip()
     years = sorted(
         {
@@ -213,19 +221,32 @@ def get_program_year_filters(df: pd.DataFrame):
 
     st.sidebar.header("Filtros")
 
-    # 👇 claves únicas y fijas
+    # ---- PROGRAMA: ahora con "Todos los programas" ----
+    opciones_prog = ["Todos los programas"] + programas
     programa_sel = st.sidebar.selectbox(
         "Programa",
-        programas,
+        opciones_prog,
         key="sidebar_programa",
     )
+
+    # ---- AÑO ----
     year_sel = st.sidebar.selectbox(
         "AñoEgreso (opcional)",
         ["Todos"] + years,
         key="sidebar_year",
     )
 
-    mask = df[prog_col].astype(str).str.strip().eq(programa_sel)
+    # ==============================
+    # CONSTRUIR EL MASK DE FILTRO
+    # ==============================
+    # Empezamos con todo True y vamos filtrando
+    mask = pd.Series(True, index=df.index)
+
+    # Si NO es "Todos los programas", filtramos por programa
+    if programa_sel != "Todos los programas":
+        mask = mask & prog_series.eq(programa_sel)
+
+    # Si NO es "Todos", filtramos por año
     if year_sel != "Todos":
         mask = mask & years_raw.str.contains(year_sel)
 
