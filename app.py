@@ -665,6 +665,22 @@ def main():
             else:
                 st.info(f"Tipo no soportado: {qtype}")
 
+    # ===== CONCLUSIONES DEL INFORME =====
+    st.markdown("## Conclusiones del informe")
+
+    conclusiones = st.text_area(
+        height=200,
+        key="conclusiones_texto",
+        help="Este texto se guardará mientras la página esté abierta y saldrá al imprimir/guardar en PDF.",
+    )
+
+    # Vista previa en formato “bonito” para el PDF
+    if conclusiones.strip():
+        st.markdown("### Conclusiones")
+        # Reemplazamos saltos de línea por saltos de línea en Markdown
+        st.markdown(conclusiones.replace("\n", "  \n"))
+
+
 
 if __name__ == "__main__":
     main()
