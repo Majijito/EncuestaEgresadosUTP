@@ -633,7 +633,7 @@ h2, h3 {{
     st.markdown(
         f"""
     <div class="portada-box">
-      <h1>Informe de Encuesta de Egresados</h1>
+      <h1>Informe de Encuesta de Egresados Pregrado</h1>
       <h3>Universidad Tecnológica de Pereira · ASEUTP</h3>
       <div class="portada-meta">
         <p><strong>Programa:</strong> {programa}</p>
