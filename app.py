@@ -619,10 +619,10 @@ def main():
     # Títulos visibles por sección
     section_titles = {
         "A": "Situación Laboral",
-        "B": "Parte B",
-        "C": "Parte C",
-        "D": "Parte D",
-        "E": "Parte E",
+        "B": "Emprendimiento",
+        "C": "Satisfacción con los recursos ofrecidos por la Universidad",
+        "D": "Autoevaluación",
+        "E": "Acreditación Institucional ",
     }
 
     for sec in sections:
