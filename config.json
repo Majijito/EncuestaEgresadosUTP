@@ -402,24 +402,6 @@
         "Tutor/ facilitador en educación continuada",
         "Otro. ¿Cuál?35"
       ]
-    },
-    {
-      "column": "¿Qué beneficios te gustaría obtener de una asociación de egresados?",
-      "label": "Beneficios que le gustaría obtener",
-      "type": "CATEGORICA",
-      "section": "E"
-    },
-    {
-      "column": "Por ser recién egresado UTP tienes 6 meses gratis de asociación a la Asociación Nacional de Egresados ASEUTP. Desea adquirir este beneficio",
-      "label": "Acepta beneficio de 6 meses ASEUTP",
-      "type": "BINARIA",
-      "section": "E"
-    },
-    {
-      "column": "Autoriza a la Universidad para que la información que he suministrado sea utilizada únicamente en actividades que busquen el cumplimiento de la misión de la Universidad Tecnológica de Pereira y el beneficio de los egresados.",
-      "label": "Autoriza el tratamiento de datos",
-      "type": "BINARIA",
-      "section": "E"
     }
   ]
 }
