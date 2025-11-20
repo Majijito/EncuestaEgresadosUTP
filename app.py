@@ -666,10 +666,10 @@ def main():
                 st.info(f"Tipo no soportado: {qtype}")
 
     # ===== CONCLUSIONES DEL INFORME =====
-    st.markdown("## Conclusiones del informe")
+    st.markdown("## Conclusiones")
 
     conclusiones = st.text_area(
-        "Escribe aquí las conclusiones que quieres que aparezcan en el informe (PDF).",
+        "",
         height=200,
         key="conclusiones_texto",
         help="Este texto se guardará mientras la página esté abierta y saldrá al imprimir/guardar en PDF.",
